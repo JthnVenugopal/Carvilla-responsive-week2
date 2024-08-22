@@ -1,486 +1,242 @@
-/* Base styling for header */
 .header {
   height: 100px; 
   background-color: black; 
   position: fixed; 
   width: 100vw; 
-   
-  z-index: 1000; /* Ensure header stays on top of other elements */
-  opacity: 0.9; /* Slightly transparent header */
+  z-index: 1000; 
+  opacity: 0.9;
 }
 
-/* Universal styles for all elements */
-* {
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  font-family: "Playfair Display", serif; /* Set font for all elements */
-}
-
-/* Header text styling */
 .header h4 {
-  color: aliceblue; /* Set the text color to aliceblue */
-  margin: 1em 0; /* Add margin to top and bottom */
-  font-weight: 700; /* Set font weight to bold */
-  text-align: center; /* Center align the text */
-  line-height: 100px; /* Vertically center the text */
+  color: aliceblue; 
+  margin: 1em 0; 
+  font-weight: 700; 
+  text-align: center; 
+  line-height: 100px;
 }
 
-/* Base styling for body */
-body {
-  
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Media queries for different device sizes */
-
-/* Small devices (phones, less than 576px) */
+/* Consolidate media queries for header */
 @media (max-width: 575.98px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .header {
-    height: 80px; /* Reduce header height */
+    height: 80px;
   }
-
   .header h4 {
-    font-size: 1.2em; /* Adjust font size */
-    margin: 0.5em 0; /* Adjust margin */
-    line-height: 50px; /* Adjust vertical alignment */
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    line-height: 50px;
   }
-
-  .header .navbar .container-fluid{
-    background-color: antiquewhite;
-    
-  }
-
-  
 }
 
-/* Medium devices (tablets, 576px to 767.98px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .header {
-    height: 90px; /* Set a larger header height */
+    height: 90px;
   }
-
   .header h4 {
-    font-size: 1.4em; /* Adjust font size */
-    margin: 1.2em 0; /* Adjust margin */
-    line-height: 10px; /* Adjust vertical alignment */
+    font-size: 1.4em;
+    margin: 1.2em 0;
+    line-height: 10px;
   }
 }
 
-/* Large devices (desktops, 768px to 991.98px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
+/* Combine large device media queries */
+@media (min-width: 768px) {
   .header {
-    height: 100px; /* Default header height */
+    height: 100px;
   }
-
   .header h4 {
-    font-size: 1.6em; /* Adjust font size */
-    margin: 1.1em 0; /* Default margin */
-    line-height: 10px; /* Default vertical alignment */
+    font-size: 1.6em;
+    margin: 1.1em 0;
+    line-height: 10px;
   }
 }
 
-/* Extra-large devices (larger desktops, 992px to 1199.98px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
+@media (min-width: 992px) {
   .header {
-    height: 110px; /* Larger header height */
+    height: 110px;
   }
-
   .header h4 {
-    font-size: 1.8em; /* Larger font size */
-    margin: 1.25em 0; /* Larger margin */
-    line-height: 10px; /* Adjust vertical alignment */
+    font-size: 1.8em;
+    margin: 1.25em 0;
+    line-height: 10px;
   }
 }
 
-/* Extra-extra-large devices (very large screens, 1200px and up) */
 @media (min-width: 1200px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .header {
-    height: 120px; /* Larger header height */
+    height: 120px;
   }
-
   .header h4 {
-    font-size: 2em; /* Largest font size */
-    margin: 1.2em 0; /* Largest margin */
-    line-height: 10px; /* Adjust vertical alignment */
+    font-size: 2em;
+    margin: 1.2em 0;
+    line-height: 10px;
   }
 }
 
 /*---------------------hero section-----------------------------------*/
 
-/* Hero section styling with full-height and centered content */
 .hero {
-  height: 900px; /* Set height of hero section */
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  background: linear-gradient(rgba(13, 1, 101, 0.315), rgba(91, 115, 255, 0.226)), url(images/welcome-hero/welcome-banner.jpg); /* Set background image with gradient */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent background repeat */
-  background-size: cover; /* Cover the entire section with the background */
-  overflow: hidden; /* Prevent content overflow */
+  height: 900px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: linear-gradient(rgba(13, 1, 101, 0.315), rgba(91, 115, 255, 0.226)), url(images/welcome-hero/welcome-banner.jpg);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  overflow: hidden;
 }
 
-/* Full-width container with no padding */
-.hero .container-fluid {
-  padding: 0; /* Remove padding */
-  overflow: hidden; /* Prevent content overflow */
-}
-
-/* Row styling */
-.row {
-  margin: 0; /* Remove default margin */
-  overflow: hidden; /* Prevent content overflow */
-}
-
-/* Column styling for centering content */
-.col-12.col-xl-6 {
-  padding: 0.1rem; /* Small padding */
-  display: flex; /* Use flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  overflow: hidden; /* Prevent content overflow */
-}
-
-/* Styling for hero section text */
 .hero h2 {
-  color: white; /* White text color */
-  font-size: 1.8rem; /* Set font size */
-  line-height: 1.2; /* Line height for readability */
-  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
-  font-weight: 800; /* Bold text */
-  overflow: hidden; /* Prevent text overflow */
+  color: white; 
+  font-size: 1.8rem; 
+  line-height: 1.2; 
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.5); 
+  font-weight: 800;
 }
 
-/* Responsive design adjustments for hero section */
+/* Consolidate hero section media queries */
 @media (max-width: 992px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .hero h2 {
-    font-size: 1.8rem; /* Adjust font size for tablets */
-  }
-
-  .hero p {
-    font-size: 0.9rem; /* Adjust paragraph font size */
-  }
-
-  .bg-info, .bg-warning {
-    padding: 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .hero h2 {
-    font-size: 1.6rem; /* Adjust font size for smaller screens */
+    font-size: 1.6rem;
   }
-
   .hero p {
-    font-size: 0.8rem; /* Adjust paragraph font size */
-  }
-
-  .bg-info, .bg-warning {
-    padding: 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 576px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
   .hero h2 {
-    font-size: 1.4rem; /* Adjust font size for mobile phones */
+    font-size: 1.4rem;
   }
-
   .hero p {
-    font-size: 0.75rem; /* Adjust paragraph font size */
-  }
-
-  .bg-info, .bg-warning {
-    padding: 1rem; /* Adjust padding for mobile phones */
-  }
-}
-
-/* Button styling */
-.contact-btn {
-  background-color: #007bff; /* Set button background color */
-  color: white; /* Set button text color */
-  border: none; /* Remove border */
-  padding: 0.75rem 1.5rem; /* Add padding to button */
-  font-size: 0.75rem; /* Set font size */
-  border-radius: 0.25rem; /* Round the corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s ease; /* Add smooth transition on hover */
-}
-
-/* Hover effect for contact button */
-.contact-btn:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-}
-
-/* Center align text in hero paragraph */
-.hero-para {
-  text-align: center; /* Center align text */
-}
-
-/* Media Queries for Button */
-@media (max-width: 768px) {
-  .contact-btn {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-    padding: 0.5rem 1.2rem; /* Adjust padding for smaller screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-btn {
-    font-size: 0.8rem; /* Adjust font size for mobile screens */
-    padding: 0.4rem 1rem; /* Adjust padding for mobile screens */
+    font-size: 0.75rem;
   }
 }
 
 /*--------------------about blk-------------------*/
 
-/* About Block section styling */
 .about-blk {
-  position: relative; /* Position relative to its normal position */
-  top: 100px; /* Move section down by 100px */
-  padding: 50px 0; /* Add padding to top and bottom */
-  overflow: hidden; /* Prevent content overflow */
+  position: relative; 
+  top: 100px; 
+  padding: 50px 0; 
+  overflow: hidden;
 }
 
-/* Heading styling within About Block */
 .about-blk h2 {
-  font-size: 2rem; /* Set font size for heading */
-  font-weight: 800; /* Bold heading */
-  text-align: center; /* Center align heading */
-  padding-bottom: 1.5rem; /* Add space below heading */
-  color: #333; /* Set text color */
-  overflow: hidden; /* Prevent text overflow */
+  font-size: 2rem; 
+  font-weight: 800; 
+  text-align: center; 
+  padding-bottom: 1.5rem; 
+  color: #333;
 }
 
-/* Individual about block item styling */
 .about-blk .about-item {
-  padding: 2rem 1rem; /* Add padding to item */
-  border-radius: 0.5rem; /* Round the corners */
-  text-align: center; /* Center align text */
-  background-color: rgba(255, 255, 255, 0.8); /* Set background color with transparency */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to item */
-  transition: transform 0.3s ease; /* Smooth transition on hover */
+  padding: 2rem 1rem; 
+  border-radius: 0.5rem; 
+  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease;
 }
 
-/* Hover effect for about block item */
 .about-blk .about-item:hover {
-  transform: translateY(-10px); /* Move item up slightly on hover */
+  transform: translateY(-10px);
 }
 
-/* Icon styling within about block */
 .about-blk .about-item i {
-  font-size: 3rem; /* Set icon size */
-  color: #007bff; /* Set icon color */
-  padding-bottom: 1rem; /* Add space below icon */
+  font-size: 3rem; 
+  color: #007bff; 
+  padding-bottom: 1rem;
 }
 
-/* Paragraph styling within about block */
 .about-blk .about-item p {
-  font-size: 1rem; /* Set paragraph font size */
-  color: #555; /* Set paragraph text color */
+  font-size: 1rem; 
+  color: #555;
 }
 
-/* Media queries for responsiveness */
-
-/* Medium devices (tablets, 576px to 767.98px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .about-blk {
-    top: 80px; /* Adjust top position */
-    padding: 40px 0; /* Adjust padding */
-  }
-
-  .about-blk h2 {
-    font-size: 1.8rem; /* Adjust heading font size */
-  }
-
-  .about-blk .about-item {
-    padding: 1.5rem 0.75rem; /* Adjust item padding */
-  }
-}
-
-/* Small devices (phones, less than 576px) */
+/* Consolidate media queries for About Block */
 @media (max-width: 575.98px) {
   .about-blk {
-    top: 60px; /* Adjust top position */
-    padding: 30px 0; /* Adjust padding */
-  }
-
-  .about-blk h2 {
-    font-size: 1.6rem; /* Adjust heading font size */
-  }
-
-  .about-blk .about-item {
-    padding: 1rem 0.5rem; /* Adjust item padding */
-  }
-
-  .about-blk .about-item i {
-    font-size: 2.5rem; /* Adjust icon size */
-  }
-
-  .about-blk .about-item p {
-    font-size: 0.9rem; /* Adjust paragraph font size */
-  }
-}
-
-/* Extra-large devices (larger desktops, 992px and up) */
-@media (min-width: 992px) {
-  .about-blk {
-    top: 120px; /* Adjust top position */
-    padding: 60px 0; /* Adjust padding */
-  }
-
-  .about-blk h2 {
-    font-size: 2.2rem; /* Increase heading font size */
-  }
-
-  .about-blk .about-item {
-    padding: 2.5rem 1.25rem; /* Adjust item padding */
-  }
-}
-
-/*------------------contact me section--------------------*/
-
-/* Contact section styling */
-.contact-me {
-  position: relative; 
-  padding: 50px 0;
-  background-color:white; 
-  overflow: hidden; 
-}
-
-/* Heading styling within Contact section */
-.contact-me h2 {
-  font-size: 2rem; /* Set font size for heading */
-  font-weight: 800; /* Bold heading */
-  text-align: center; /* Center align heading */
-  padding-bottom: 1.5rem; /* Add space below heading */
-  color: #333; /* Set text color */
-  overflow: hidden; /* Prevent text overflow */
-}
-
-/* Styling for individual contact items */
-.contact-me .contact-item {
-  padding: 2rem 1rem; /* Add padding to contact item */
-  border-radius: 0.5rem; /* Round the corners */
-  text-align: center; /* Center align text */
-  background-color: rgba(255, 255, 255, 0.8); /* Set background color with transparency */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to contact item */
-  transition: transform 0.3s ease; /* Smooth transition on hover */
-}
-
-/* Icon styling within Contact section */
-.contact-me .contact-item i {
-  font-size: 3rem; /* Set icon size */
-  color: #007bff; /* Set icon color */
-  padding-bottom: 1rem; /* Add space below icon */
-}
-
-/* Paragraph styling within Contact section */
-.contact-me .contact-item p {
-  font-size: 1rem; /* Set paragraph font size */
-  color: #555; /* Set paragraph text color */
-}
-
-/* Media queries for responsiveness */
-
-@media (min-width: 400px) {
-  .contact-me {
-    padding: 40px 0; /* Adjust padding */
-  }
-
-  .contact-me h2 {
-    font-size: 1.8rem; /* Adjust heading font size */
-  }
-
-  .contact-me .contact-item {
-    padding: 1.5rem 0.75rem; /* Adjust item padding */
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .contact-me {
-    padding: 40px 0; /* Adjust padding */
-  }
-
-  .contact-me h2 {
-    font-size: 1.8rem; /* Adjust heading font size */
-  }
-
-  .contact-me .contact-item {
-    padding: 1.5rem 0.75rem;
-  }
-}
-
-
-@media (max-width: 575px) {
-  .contact-me {
+    top: 60px; 
     padding: 30px 0; 
   }
-
-  .contact-me h2 {
-    font-size: 1.6rem; 
+  .about-blk h2 {
+    font-size: 1.6rem;
   }
-
-  .contact-me .contact-item {
-    padding: 1rem 0.5rem; 
+  .about-blk .about-item {
+    padding: 1rem 0.5rem;
   }
-
-  .contact-me .contact-item i {
+  .about-blk .about-item i {
     font-size: 2.5rem;
   }
-
-  .contact-me .contact-item p {
+  .about-blk .about-item p {
     font-size: 0.9rem;
   }
 }
 
 
-@media (min-width: 992px) {
+/*------------------contact me section--------------------*/
+
+.contact-me {
+  position: relative; 
+  padding: 50px 0;
+  background-color: white; 
+  overflow: hidden;
+}
+
+.contact-me h2 {
+  font-size: 2rem; 
+  font-weight: 800; 
+  text-align: center; 
+  padding-bottom: 1.5rem; 
+  color: #333;
+}
+
+.contact-me .contact-item {
+  padding: 2rem 1rem; 
+  border-radius: 0.5rem; 
+  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease;
+}
+
+.contact-me .contact-item i {
+  font-size: 3rem; 
+  color: #007bff; 
+  padding-bottom: 1rem;
+}
+
+.contact-me .contact-item p {
+  font-size: 1rem; 
+  color: #555;
+}
+
+/* Consolidate media queries for Contact Me */
+@media (max-width: 575px) {
   .contact-me {
-    padding: 60px 0; 
+    padding: 30px 0;
   }
-
   .contact-me h2 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
-
   .contact-me .contact-item {
-    padding: 2.5rem 1.25rem;
+    padding: 1rem 0.5rem;
+  }
+  .contact-me .contact-item i {
+    font-size: 2.5rem;
+  }
+  .contact-me .contact-item p {
+    font-size: 0.9rem;
   }
 }
+
 
 /*--------------brand blk----------------------*/
 @media (max-width: 400px) {
